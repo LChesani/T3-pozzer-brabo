@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1626955631 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1603974868 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Vector2.h"
+
+1426372440 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\include\gl\glut.h
+	"freeglut_std.h"
+
+1437579942 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1426372440 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1589217858 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\vector2.h
+
+1684279973 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1684278701 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Vector2.h"
+
+1589217858 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\vector2.h
+
+1684285015 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
+	"Base.h"
+	"../canvas/gl_canvas2d.h"
+
+1684286434 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
+	"Protagonist.h"
+	"../weapon/Weapon.h"
+
+1684286153 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
+	"Agent.h"
+	"../weapon/Weapon.h"
+	"../weapon/Base.h"
+
+1684285691 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
+	"../canvas/gl_canvas2d.h"
+
+1684279789 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"agent/Agent.h"
+	"agent/Protagonist.h"
+	"canvas/gl_canvas2d.h"
+
+1684275483 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\projectile.cpp
+
+1684287725 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\weapon.h
+	"../canvas/gl_canvas2d.h"
+	"projectile/Projectile.h"
+	"../agent/Agent.h"
+	<vector>
+
+1684286640 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\projectile.h
+	"../../canvas/gl_canvas2d.h"
+	"../../agent/Agent.h"
+
+1684282089 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.h
+	"Weapon.h"
+	"projectile/DefaultProjectile.h"
+
+1684287683 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.h
+	"Projectile.h"
+
+1684287760 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
+	"DefaultProjectile.h"
+
