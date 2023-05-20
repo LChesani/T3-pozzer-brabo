@@ -99,6 +99,7 @@ void Protagonist::KeyUp(int key){
 void Protagonist::setHp(int _h){
     if(imortal == 0){ //se esta com status de imortal nao pode perder nem recuperar vida
         hp = _h;
+        imortal = 200; //tempo imortal devido a reespawnar
     }
 }
 
@@ -108,9 +109,6 @@ void Protagonist::shoot(){
 
 void Protagonist::reespawn(float sw){
     setHp(getHp() - 1);
-    if(imortal == 0){
-        imortal = 200; //tempo imortal devido a reespawnar
-    }
     setX(sw/2);
 }
 

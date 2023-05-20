@@ -4,8 +4,7 @@
 
 #include "../../canvas/gl_canvas2d.h"
 #include "../../agent/Agent.h"
-
-
+#include "../src/canvas/utils.h"
 
 
 
@@ -18,11 +17,12 @@ private:
     int speed;
     int damage;
     int range; //alcance
-
 protected:
-    hb hitbox;
+    
 
 public:
+    hb hitbox;
+    bool alive; //se a bala ainda ta no jogo
     int getX() { return x; }
     int getY() { return y; }
     void setX(float _x) { x = _x;}
@@ -39,7 +39,7 @@ public:
     void setDamage(int _d) { damage = _d; }
     int getRange() { return range; }
     void setRange(int _r) { range = _r; }
-    hb getHitbox() { return hitbox; }    
+    virtual void collider() = 0;
 };
 
 

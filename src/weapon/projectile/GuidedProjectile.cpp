@@ -22,10 +22,25 @@ void GuidedProjectile::atualizaHitbox(){
     r.p2 = Vector2(getX() + getWidth(), getY() + getHeight());
     hitbox.retas.push_back(r);
 }
+
+
+void GuidedProjectile::collider(){
+    for(auto r : target->getHitbox().retas){
+        for(auto r2 : hitbox.retas){
+            if(getIntersection(r, r2)){
+                target->setHp(target->getHp() - 1); //dano ao contato
+                alive = false;
+                return;
+            }
+        }
+    }
+}
+
+
 GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
 {
     setX(_x);
-    setY(_y);
+    setY(_y-50);
     setDamage(1);
     setSpeed(5);
     setHeight(20);
@@ -43,6 +58,7 @@ GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
 
     // vetor de direcao
     direction = Vector2(directionX, directionY);
+    alive = true;
     atualizaHitbox();
 }
 
@@ -54,6 +70,7 @@ void GuidedProjectile::move()
 
     setRange(getRange() - 1);
     atualizaHitbox();
+    collider();
 }
 
 

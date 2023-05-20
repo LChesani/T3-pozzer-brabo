@@ -2,15 +2,9 @@
 #define __AGENT__H__
 
 #include "../canvas/gl_canvas2d.h"
+#include "../canvas/utils.h"
 #include <vector>
-struct reta{
-    Vector2 p1;
-    Vector2 p2;
-};
 
-struct hb{
-    std::vector<reta> retas;
-};
 
 class Agent{
 
@@ -46,7 +40,6 @@ public:
     hb getHitbox() { return hitbox; }
     Agent *getTarget() { return target; }
 };
-
 
 
 

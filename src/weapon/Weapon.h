@@ -17,10 +17,11 @@ private:
     Agent *user;
 
 protected:
-    std::vector<Projectile*> projectiles;
+    
     
     
 public:
+    std::vector<Projectile*> projectiles;
     Projectile *getProjectile() { return p; }
     int count;
     int cooldown;
@@ -30,22 +31,17 @@ public:
     void setUser(Agent *_u) { user = _u; }
     void render(){
         for (auto it = projectiles.begin(); it != projectiles.end();) {
-            if ((*it)->getRange() <= 0) {
+            if ((*it)->getRange() <= 0 || !(*it)->alive) {
                 delete *it; // Deletar o objeto apontado pelo ponteiro
                 it = projectiles.erase(it); // Remover o ponteiro do vetor e atualizar o iterador
             } else {
-                (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
                 (*it)->move(); // Chamar o método move() no objeto apontado pelo ponteiro
+                (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
                 ++it; // Incrementar o iterador para avançar para o próximo elemento
             }
         }
     }
 };
-
-
-
-
-
 
 
 

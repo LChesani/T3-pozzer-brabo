@@ -6,6 +6,7 @@ void Enemy::setHp(int _h){
 }
 
 
+
 void Enemy::atualizaHitbox(){
     reta r;
     hitbox.retas.clear();
@@ -35,7 +36,7 @@ Enemy::Enemy(int _x, int _y, Agent *target, int level){
     setSpeed(1);
     this->target = target;
     setHp(2*level);
-
+    alive = true;
     weapon = new EnemyWeapon(this);
 
     atualizaHitbox();
@@ -57,12 +58,41 @@ void Enemy::move(){ //se move em direcao ao alvo
 }
 
 
+void Enemy::update(Weapon *_w){
+    for (auto it = _w->projectiles.begin(); it != _w->projectiles.end(); ++it) {
+        for(auto r2 : hitbox.retas){
+            for(auto r3 : (*it)->hitbox.retas){
+                if(getIntersection(r2, r3)){
+                    setHp(getHp() - (*it)->getDamage()); //dano ao contato
+                    (*it)->alive = false;
+                }
+            }
+        }
+    }
+}
+
+void Enemy::collider(){
+    for(auto r : target->getHitbox().retas){
+        for(auto r2 : hitbox.retas){
+            if(getIntersection(r, r2)){
+                target->setHp(target->getHp() - 1); //dano ao contato
+                alive = false;
+                return;
+            }
+        }
+    }
+}
+
 void Enemy::render(){
     move();
+    if(getHp() <= 0){
+        alive = false;
+    }
     CV::color(0, 1, 0);
     CV::rectFill(getX(), getY(), getX() + getWidth(), getY() + getHeight());
     weapon->render();
     weapon->fire();
     weapon->count+=1;
     atualizaHitbox();
+    collider();
 }

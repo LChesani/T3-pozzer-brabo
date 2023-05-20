@@ -6,6 +6,7 @@
 #include "../src/canvas/gl_canvas2d.h"
 #include "../src/canvas/Vector2.h"
 #include "../src/agent/Enemy.h"
+#include "../src/canvas/utils.h"
 #include <random>
 #include <chrono>
 

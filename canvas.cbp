@@ -45,6 +45,8 @@
 		</Linker>
 		<Unit filename="include/GL/glut.h" />
 		<Unit filename="src/agent/Agent.h" />
+		<Unit filename="src/agent/Enemy.cpp" />
+		<Unit filename="src/agent/Enemy.h" />
 		<Unit filename="src/agent/Protagonist.cpp" />
 		<Unit filename="src/agent/Protagonist.h" />
 		<Unit filename="src/canvas/Vector2.h" />
@@ -55,9 +57,13 @@
 		<Unit filename="src/stage/Stage.h" />
 		<Unit filename="src/weapon/Base.cpp" />
 		<Unit filename="src/weapon/Base.h" />
+		<Unit filename="src/weapon/EnemyWeapon.cpp" />
+		<Unit filename="src/weapon/EnemyWeapon.h" />
 		<Unit filename="src/weapon/Weapon.h" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.cpp" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.h" />
+		<Unit filename="src/weapon/projectile/GuidedProjectile.cpp" />
+		<Unit filename="src/weapon/projectile/GuidedProjectile.h" />
 		<Unit filename="src/weapon/projectile/Projectile.h" />
 		<Extensions>
 			<code_completion />

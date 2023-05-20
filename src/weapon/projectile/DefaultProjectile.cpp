@@ -20,7 +20,13 @@ void DefaultProjectile::atualizaHitbox(){
     r.p1 = Vector2(getX() + getWidth(), getY());
     r.p2 = Vector2(getX() + getWidth(), getY() + getHeight());
     hitbox.retas.push_back(r);
+    
 }
+
+void DefaultProjectile::collider(){
+
+}
+
 
 DefaultProjectile::DefaultProjectile(int _x, int _y){
     setX(_x);
@@ -31,6 +37,7 @@ DefaultProjectile::DefaultProjectile(int _x, int _y){
     setWidth(20);
     setRange(300);
     atualizaHitbox();
+    alive = true;
 }
 
 
