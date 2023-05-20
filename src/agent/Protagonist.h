@@ -9,11 +9,11 @@ class Protagonist : public Agent{
 private:
     Weapon *current; //ponteiro para a arma atual
     bool firing;
-
+    int speedy;
 protected:
     Weapon *base;
     Weapon *special;
-    int dir[4]; //direções
+    int dir[2]; //direções
 public:
     Protagonist(int _w, float width, float height);
     void render() override;
@@ -25,7 +25,8 @@ public:
     Weapon *getCurrentWeapon() { return current; }
     void setCurrentWeapon(Weapon *_c) { current = _c; }
     void shoot();
-    void limit();
+    void setSpeedY(int _s) { speedy = _s; }
+    int getSpeedY(){ return speedy; }
 };
 
 

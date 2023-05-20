@@ -2,21 +2,22 @@
 #include "../weapon/Weapon.h"
 
 Protagonist::Protagonist(int _w, float width, float height){
+    setSpeedY(10); //cima
+    setSpeed(8); //lados
     setX(_w/2 - width/2);
-    setY(50);
+    setY(0);
     setWidth(width);
     setHeight(height);
-    setSpeed(2);
     base = new Base(this);
+    setFiring(false);
     setCurrentWeapon(base);
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < 2; i++){
         dir[i] = 0;
     }
 }
 
 void Protagonist::move(){
     setX(getX() + getSpeed() * (dir[0] + dir[1]));
-    setY(getY() + getSpeed() * (dir[2] + dir[3]));
 }
 
 
@@ -28,14 +29,6 @@ void Protagonist::keyPress(int key){
     }
     if(key == 'd' || key == 'D'){
         dir[1] = 1;
-        return;
-    }
-    if(key == 'w' || key == 'W'){
-        dir[2] = 1;
-        return;
-    }
-    if(key == 's' || key == 'S'){
-        dir[3] = -1;
         return;
     }
     if(key == '1'){
@@ -63,14 +56,6 @@ void Protagonist::KeyUp(int key){
     }
     if(key == 'd' || key == 'D'){
         dir[1] = 0;
-        return;
-    }
-    if(key == 'w' || key == 'W'){
-        dir[2] = 0;
-        return;
-    }
-    if(key == 's' || key == 'S'){
-        dir[3] = 0;
         return;
     }
 }

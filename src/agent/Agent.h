@@ -13,8 +13,8 @@ private:
     int speed;
 
 public:
-    int getX() { return x; }
-    int getY() { return y; }
+    float getX() { return x; }
+    float getY() { return y; }
     void setX(float _x) { x = _x;}
     void setY(float _y) { y = _y;}
     float getHeight() { return height; }

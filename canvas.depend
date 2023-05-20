@@ -46,31 +46,33 @@
 
 1589217858 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\vector2.h
 
-1684285015 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
+1684422368 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
 	"Base.h"
 	"../canvas/gl_canvas2d.h"
 
-1684286434 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
+1684421713 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
 	"Protagonist.h"
 	"../weapon/Weapon.h"
 
-1684286153 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
+1684421213 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
 	"Agent.h"
 	"../weapon/Weapon.h"
 	"../weapon/Base.h"
 
-1684285691 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
+1684414722 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
 	"../canvas/gl_canvas2d.h"
 
-1684279789 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
+1684415525 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
 	<stdio.h>
 	<stdlib.h>
+	"stage/Stage.h"
 	"agent/Agent.h"
 	"agent/Protagonist.h"
 	"canvas/gl_canvas2d.h"
+	"stage/Stage.h"
 
 1684275483 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\projectile.cpp
 
@@ -91,6 +93,17 @@
 1684287683 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.h
 	"Projectile.h"
 
-1684287760 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
+1684422326 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
 	"DefaultProjectile.h"
+
+1684422941 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.cpp
+	"Stage.h"
+	<random>
+	<chrono>
+
+1684416394 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.h
+	<vector>
+	<../src/agent/Protagonist.h>
+	<../src/canvas/gl_canvas2d.h>
+	<../src/canvas/Vector2.h>
 

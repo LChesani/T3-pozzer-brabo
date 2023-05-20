@@ -7,30 +7,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "stage/Stage.h"
 #include "agent/Agent.h"
 #include "agent/Protagonist.h"
 #include "canvas/gl_canvas2d.h"
+#include "stage/Stage.h"
 
 int opcao  = 50;
 int screenWidth = 500, screenHeight = 500;
 int mouseX, mouseY;
 
-Protagonist *MC = nullptr;
+Protagonist *player = nullptr;
+Stage *stage = nullptr;
 
-void render()
-{
-   MC->render();
+void render(){
+   if(player != nullptr){
+      player->render();
+   }
+   if(stage != nullptr){
+      stage->render();
+   }
 }
 
 void keyboard(int key)
 {
-   MC->keyPress(key);
+   player->keyPress(key);
 }
 
 //funcao chamada toda vez que uma tecla for liberada
 void keyboardUp(int key)
 {
-   MC->KeyUp(key);
+   player->KeyUp(key);
 }
 
 //funcao para tratamento de mouse: cliques, movimentos e arrastos
@@ -49,6 +56,7 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 int main(void)
 {
    CV::init(&screenWidth, &screenHeight, "Space invaders malvado");
-   MC = new Protagonist(screenWidth, 50.0, 100.0);
+   player = new Protagonist(screenWidth, 50.0, 100.0);
+   stage = new Stage(screenWidth, screenHeight, player);
    CV::run();
 }

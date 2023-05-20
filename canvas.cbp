@@ -51,12 +51,13 @@
 		<Unit filename="src/canvas/gl_canvas2d.cpp" />
 		<Unit filename="src/canvas/gl_canvas2d.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/stage/Stage.cpp" />
+		<Unit filename="src/stage/Stage.h" />
 		<Unit filename="src/weapon/Base.cpp" />
 		<Unit filename="src/weapon/Base.h" />
 		<Unit filename="src/weapon/Weapon.h" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.cpp" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.h" />
-		<Unit filename="src/weapon/projectile/Projectile.cpp" />
 		<Unit filename="src/weapon/projectile/Projectile.h" />
 		<Extensions>
 			<code_completion />

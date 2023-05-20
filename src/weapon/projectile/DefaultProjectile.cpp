@@ -6,7 +6,7 @@ DefaultProjectile::DefaultProjectile(int _x, int _y){
     setX(_x);
     setY(_y);
     setDamage(1);
-    setSpeed(3);
+    setSpeed(20);
     setHeight(40);
     setWidth(20);
     setRange(300);

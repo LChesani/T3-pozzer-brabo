@@ -9,7 +9,7 @@
 Base::Base(Agent *_user)
 {
     setUser(_user);
-    cooldown = 50;
+    cooldown = 25;
     count = 0;
 }
 
