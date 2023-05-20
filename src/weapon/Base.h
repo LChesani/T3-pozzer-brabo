@@ -3,7 +3,7 @@
 
 #include "Weapon.h"
 #include "projectile/DefaultProjectile.h"
-
+#include "../canvas/gl_canvas2d.h"
 
 
 class Base : public Weapon{

@@ -19,6 +19,9 @@ private:
     int damage;
     int range; //alcance
 
+protected:
+    hb hitbox;
+
 public:
     int getX() { return x; }
     int getY() { return y; }
@@ -36,6 +39,7 @@ public:
     void setDamage(int _d) { damage = _d; }
     int getRange() { return range; }
     void setRange(int _r) { range = _r; }
+    hb getHitbox() { return hitbox; }    
 };
 
 

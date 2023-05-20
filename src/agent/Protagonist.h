@@ -4,6 +4,8 @@
 #include "../weapon/Weapon.h"
 #include "../weapon/Base.h"
 
+
+
 class Protagonist : public Agent{
 
 private:
@@ -14,6 +16,9 @@ protected:
     Weapon *base;
     Weapon *special;
     int dir[2]; //direções
+    int imortal;
+    int color;
+    void status();
 public:
     Protagonist(int _w, float width, float height);
     void render() override;
@@ -27,6 +32,10 @@ public:
     void shoot();
     void setSpeedY(int _s) { speedy = _s; }
     int getSpeedY(){ return speedy; }
+    void atualizaHitbox();
+    void reespawn(float sw);
+    bool isAlive();
+    void setHp(int _h) override;
 };
 
 

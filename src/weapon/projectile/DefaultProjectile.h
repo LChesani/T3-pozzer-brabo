@@ -2,7 +2,7 @@
 #define __DEFAULTPROJECTILE__H__
 
 #include "Projectile.h"
-
+#include <cmath>
 
 
 
@@ -14,6 +14,7 @@ public:
     DefaultProjectile(int _x, int _y);
     void render() override;
     void move() override;
+    void atualizaHitbox();
 };
 
 

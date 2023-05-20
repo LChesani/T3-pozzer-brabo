@@ -13,8 +13,7 @@
 #include "canvas/gl_canvas2d.h"
 #include "stage/Stage.h"
 
-int opcao  = 50;
-int screenWidth = 500, screenHeight = 500;
+int screenWidth = 1280, screenHeight = 720;
 int mouseX, mouseY;
 
 Protagonist *player = nullptr;
@@ -23,6 +22,10 @@ Stage *stage = nullptr;
 void render(){
    if(player != nullptr){
       player->render();
+      if(!player->isAlive()){
+         player = nullptr;
+         delete player;
+      }
    }
    if(stage != nullptr){
       stage->render();
@@ -31,13 +34,17 @@ void render(){
 
 void keyboard(int key)
 {
-   player->keyPress(key);
+   if(player != nullptr){
+      player->keyPress(key);
+   }
 }
 
 //funcao chamada toda vez que uma tecla for liberada
 void keyboardUp(int key)
 {
-   player->KeyUp(key);
+   if(player != nullptr){
+      player->KeyUp(key);
+   }
 }
 
 //funcao para tratamento de mouse: cliques, movimentos e arrastos
