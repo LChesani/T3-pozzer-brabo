@@ -30,6 +30,7 @@ void render(){
    if(stage != nullptr){
       stage->render();
    }
+
 }
 
 void keyboard(int key)
@@ -65,5 +66,6 @@ int main(void)
    CV::init(&screenWidth, &screenHeight, "Space invaders malvado");
    player = new Protagonist(screenWidth, 50.0, 100.0);
    stage = new Stage(screenWidth, screenHeight, player);
+   
    CV::run();
 }

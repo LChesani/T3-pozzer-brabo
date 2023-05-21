@@ -1,5 +1,5 @@
 #include "Protagonist.h"
-#include "../weapon/Weapon.h"
+
 
 void Protagonist::atualizaHitbox() {
     hitbox.retas.clear();
@@ -43,9 +43,18 @@ Protagonist::Protagonist(int _w, float width, float height){
 
     imortal = 0;
 
-    atualizaHitbox();
-    color = 0;
+    delta = 0;
 
+    atualizaHitbox();
+
+    n_sprites = 4;
+    sprite_count = 0;
+    sprites = new Bmp*[5];
+    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/protagonist/1.bmp");
+    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/protagonist/2.bmp");
+    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/protagonist/3.bmp");
+    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/protagonist/4.bmp");
+    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/protagonist/5.bmp");
 }
 
 
@@ -115,13 +124,9 @@ void Protagonist::reespawn(float sw){
 void Protagonist::status(){
     if(imortal > 0){
         imortal-=1;
-        if(imortal % 25 == 0){ //pisca pisca
-            if(color == 0){
-                color = 13;
-            }
-            else{
-                color = 0;
-            }
+        CV::color(0, 1, 1);
+        for(int i = 0; i < 5; i++){
+            CV::circle(getX() + getWidth()/2-4, getY() + getHeight()/2-10, getWidth()+i, 200);
         }
     }
 }
@@ -133,13 +138,9 @@ bool Protagonist::isAlive(){
 void Protagonist::render(){
     move();
     status();
-    CV::color(color);
+
     isAlive();
 
-    float vx[] = { getX(), getX() + getWidth(), getX() + getWidth() / 2 };
-    float vy[] = { getY(), getY(), getY() + getHeight() };
-
-    CV::polygonFill(vx, vy, 3);
 
     base->count+=1;
     if(getFiring()){
@@ -147,6 +148,17 @@ void Protagonist::render(){
     }
 
     atualizaHitbox();
-    base->render();
-    //special->render();
+
+
+    current->render();
+
+
+    sprites[sprite_count]->draw(getX(), getY());
+    delta++;
+    if((delta % 25) == 0){
+        sprite_count+=1;
+    }
+    if(sprite_count == (n_sprites-1)){
+        sprite_count = 0;
+    }
 }

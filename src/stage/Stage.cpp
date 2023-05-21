@@ -4,7 +4,7 @@
 Stage::Stage(int _w, int _h, Protagonist *player){
     w = _w;
     h = _h;
-    ondulation = 500;
+    ondulation = 200;
     gap = h/3; //tamanho de cada quadrante da tela, cada ponto de controle vai ficar em 1 terco da tela
     this->player = player;
     for(int i = 0; i < 4; i++){ //inicializando como uma curva reta
@@ -24,8 +24,8 @@ float Stage::calcGap(int n){
 void Stage::bezier(){ //gera pontos de bezier para serem usados em uma curva cúbica
     std::random_device rd;
     std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count()/7);
-    std::uniform_int_distribution<> distresq((w*0.08), ondulation);
-    std::uniform_int_distribution<> distrdir(w-ondulation, w-(w*0.08));
+    std::uniform_int_distribution<> distresq((w*0.05), ondulation);
+    std::uniform_int_distribution<> distrdir(w-ondulation, w-(w*0.05));
 
 
     std::vector<Vector2> esq_copy = esq;

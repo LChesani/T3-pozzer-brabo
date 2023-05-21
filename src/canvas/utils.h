@@ -3,6 +3,7 @@
 #include <cmath>
 #include <vector>
 #include "Vector2.h"
+#include "../bmp/Bmp.h"
 
 struct reta{
     Vector2 p1;

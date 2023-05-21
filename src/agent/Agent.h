@@ -9,7 +9,7 @@
 class Agent{
 
 private:
-    int x, y;
+    float x, y;
     float height, width;
     float speed;
 protected:
@@ -17,6 +17,10 @@ protected:
     hb hitbox;
     Agent *target;
 public:
+    Bmp **sprites;
+    int n_sprites;
+    int sprite_count;
+    int delta;
     float getX() { return x; }
     float getY() { return y; }
     void setX(float _x) { x = _x;}

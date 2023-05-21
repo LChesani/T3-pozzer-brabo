@@ -17,7 +17,7 @@ protected:
     Weapon *special;
     int dir[2]; //direções
     int imortal;
-    int color;
+
     void status();
 public:
     Protagonist(int _w, float width, float height);

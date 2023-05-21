@@ -49,21 +49,20 @@
 1684611784 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
 	"Base.h"
 
-1684617091 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
+1684701988 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
 	"Protagonist.h"
-	"../weapon/Weapon.h"
 
-1684610483 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
+1684701387 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
 	"Agent.h"
 	"../weapon/Weapon.h"
 	"../weapon/Base.h"
 
-1684616734 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
+1684701416 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
 	"../canvas/gl_canvas2d.h"
 	"../canvas/utils.h"
 	<vector>
 
-1684609449 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
+1684698142 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -100,7 +99,7 @@
 1684619246 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
 	"DefaultProjectile.h"
 
-1684620092 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.cpp
+1684694874 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.cpp
 	"Stage.h"
 
 1684616683 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.h
@@ -135,11 +134,21 @@
 1684617567 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\guidedprojectile.cpp
 	"GuidedProjectile.h"
 
-1684620114 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.cpp
+1684620442 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.cpp
 	"Enemy.h"
 
-1684616849 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
+1684699175 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
 	<cmath>
 	<vector>
 	"Vector2.h"
+	"../bmp/Bmp.h"
+
+1684702445 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\bmp\bmp.cpp
+	"Bmp.h"
+	<string.h>
+	"../canvas/gl_canvas2d.h"
+
+1684700938 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\bmp\bmp.h
+	<stdio.h>
+	<stdlib.h>
 
