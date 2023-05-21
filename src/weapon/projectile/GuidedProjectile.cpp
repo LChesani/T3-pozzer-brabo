@@ -60,6 +60,21 @@ GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
     direction = Vector2(directionX, directionY);
     alive = true;
     atualizaHitbox();
+    delta = 0;
+    n_sprites = 11;
+    sprite_count = 0;
+    sprites = new Bmp*[11];
+    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/1.bmp");
+    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/2.bmp");
+    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/3.bmp");
+    sprites[3] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/4.bmp");
+    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/5.bmp");
+    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/6.bmp");
+    sprites[6] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/7.bmp");
+    sprites[7] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/8.bmp");
+    sprites[8] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/9.bmp");
+    sprites[9] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/10.bmp");
+    sprites[10] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/11.bmp");
 }
 
 void GuidedProjectile::move()
@@ -76,6 +91,12 @@ void GuidedProjectile::move()
 
 
 void GuidedProjectile::render(){
-    CV::color(0, 0, 1);
-    CV::rectFill(getX(), getY(), getX() + getWidth(), getY() + getHeight());
+    sprites[sprite_count]->draw(getX(), getY());
+    delta++;
+    if((delta % 10) == 0){
+        sprite_count+=1;
+    }
+    if(sprite_count == (n_sprites-1)){
+        sprite_count = 0;
+    }
 }

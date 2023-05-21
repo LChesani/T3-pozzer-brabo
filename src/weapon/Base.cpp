@@ -16,7 +16,7 @@ void Base::fire()
 {
     if(count >= cooldown){
         count = 0;
-        DefaultProjectile *p = new DefaultProjectile(getUser()->getX(), getUser()->getY());
+        DefaultProjectile *p = new DefaultProjectile(getUser()->getX()+getUser()->getWidth()/4, getUser()->getY());
         projectiles.push_back(p);
     }
 }

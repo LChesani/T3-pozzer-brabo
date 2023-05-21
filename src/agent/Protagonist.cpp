@@ -49,12 +49,11 @@ Protagonist::Protagonist(int _w, float width, float height){
 
     n_sprites = 4;
     sprite_count = 0;
-    sprites = new Bmp*[5];
+    sprites = new Bmp*[4];
     sprites[0] = new Bmp("Trab3 (malvado)/src/assets/protagonist/1.bmp");
     sprites[1] = new Bmp("Trab3 (malvado)/src/assets/protagonist/2.bmp");
     sprites[2] = new Bmp("Trab3 (malvado)/src/assets/protagonist/3.bmp");
     sprites[4] = new Bmp("Trab3 (malvado)/src/assets/protagonist/4.bmp");
-    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/protagonist/5.bmp");
 }
 
 

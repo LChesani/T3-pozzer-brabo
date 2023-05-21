@@ -21,6 +21,11 @@ protected:
     
 
 public:
+    Bmp **sprites;
+    int n_sprites;
+    int sprite_count;
+    int delta;
+    
     hb hitbox;
     bool alive; //se a bala ainda ta no jogo
     int getX() { return x; }

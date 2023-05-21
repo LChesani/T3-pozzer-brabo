@@ -40,6 +40,18 @@ Enemy::Enemy(int _x, int _y, Agent *target, int level){
     weapon = new EnemyWeapon(this);
 
     atualizaHitbox();
+    delta = 0;
+    n_sprites = 8;
+    sprite_count = 0;
+    sprites = new Bmp*[8];
+    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/enemies/1.bmp");
+    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/enemies/2.bmp");
+    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/enemies/3.bmp");
+    sprites[3] = new Bmp("Trab3 (malvado)/src/assets/enemies/4.bmp");
+    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/enemies/5.bmp");
+    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/enemies/6.bmp");
+    sprites[6] = new Bmp("Trab3 (malvado)/src/assets/enemies/7.bmp");
+    sprites[7] = new Bmp("Trab3 (malvado)/src/assets/enemies/8.bmp");
 }
 
 void Enemy::move(){ //se move em direcao ao alvo
@@ -84,15 +96,23 @@ void Enemy::collider(){
 }
 
 void Enemy::render(){
+    delta += 1;
     move();
     if(getHp() <= 0){
         alive = false;
     }
-    CV::color(0, 1, 0);
-    CV::rectFill(getX(), getY(), getX() + getWidth(), getY() + getHeight());
+
+    if((delta % 25) == 0){
+        sprite_count+=1;
+    }
+
     weapon->render();
     weapon->fire();
     weapon->count+=1;
     atualizaHitbox();
     collider();
+    if(sprite_count == 8){
+        sprite_count = 0;
+    }
+    sprites[sprite_count]->draw(getX(), getY());
 }
