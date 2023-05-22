@@ -5,6 +5,7 @@
 #include "Vector2.h"
 #include "../bmp/Bmp.h"
 
+
 struct reta{
     Vector2 p1;
     Vector2 p2;

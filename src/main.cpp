@@ -20,17 +20,20 @@ Protagonist *player = nullptr;
 Stage *stage = nullptr;
 
 void render(){
-   if(player != nullptr){
-      player->render();
-      if(!player->isAlive()){
-         player = nullptr;
-         delete player;
-      }
-   }
    if(stage != nullptr){
       stage->render();
    }
 
+   if(player != nullptr){
+      player->render();
+      player->timeBar(screenWidth, screenHeight);
+      player->hpbar(screenWidth, screenHeight);
+      if(!player->isAlive()){
+         player = nullptr;
+         delete player;
+         stage->player = nullptr;
+      }
+   }
 }
 
 void keyboard(int key)
@@ -64,6 +67,7 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 int main(void)
 {
    CV::init(&screenWidth, &screenHeight, "Space invaders malvado");
+
    player = new Protagonist(screenWidth, 50.0, 100.0);
    stage = new Stage(screenWidth, screenHeight, player);
    

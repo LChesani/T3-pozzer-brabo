@@ -33,7 +33,7 @@ Enemy::Enemy(int _x, int _y, Agent *target, int level){
     setY(_y);
     setHeight(40);
     setWidth(40);
-    setSpeed(0.5);
+    setSpeed(0.25);
     this->target = target;
     setHp(2*level);
     alive = true;

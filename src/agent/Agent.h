@@ -35,12 +35,6 @@ public:
     float getSpeed() { return speed; }
     virtual void setHp(int _h) = 0;
     int getHp() { return hp; }
-    bool collider(Vector2 point) {
-        if ((point.x >= getX()) && (point.x <= getX() + getWidth()) && (point.y >= getY()) && (point.y <= getY() + getHeight())) {
-            return true;
-        }
-        return false;
-    }
     hb getHitbox() { return hitbox; }
     Agent *getTarget() { return target; }
 };

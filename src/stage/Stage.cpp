@@ -1,6 +1,9 @@
 #include "Stage.h"
 
 
+
+
+
 Stage::Stage(int _w, int _h, Protagonist *player){
     w = _w;
     h = _h;
@@ -100,9 +103,15 @@ void Stage::render(){
     }
 
 
-    if((deltaTime % 1000) == 0){
+    if((deltaTime % 500) == 0){
         enemies.push_back(new Enemy(w/2, h, player, deltaTime/1000));
     }
+
+    if((deltaTime % 3000) == 0){
+        boxes.push_back(new Box(w/2, h, player));
+    }
+
+
 
     int s = player->getSpeedY();
 
@@ -117,6 +126,8 @@ void Stage::render(){
     }
 
     float xe, ye, xd, yd;
+
+
 
     playerY += s;
 
@@ -138,15 +149,26 @@ void Stage::render(){
     }
 
     for (auto it = enemies.begin(); it != enemies.end();) {
-            if (!(*it)->alive) {
-                delete *it; // Deletar o objeto apontado pelo ponteiro
-                it = enemies.erase(it); // Remover o ponteiro do vetor e atualizar o iterador
-            } else {
-                (*it)->update(player->getCurrentWeapon()); //verifica se alguma bala pegou nele
-                (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
-                ++it; // Incrementar o iterador para avançar para o próximo elemento
-            }
+        if (!(*it)->alive) {
+            delete *it; // Deletar o objeto apontado pelo ponteiro
+            it = enemies.erase(it); // Remover o ponteiro do vetor e atualizar o iterador
+        } else {
+            (*it)->update(player->getCurrentWeapon()); //verifica se alguma bala pegou nele
+            (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
+            ++it; // Incrementar o iterador para avançar para o próximo elemento
         }
+    }
+
+    for (auto it = boxes.begin(); it != boxes.end();) {
+        if (!(*it)->alive || ((*it)->getY() < 0)) {
+            delete *it; // Deletar o objeto apontado pelo ponteiro
+            it = boxes.erase(it); // Remover o ponteiro do vetor e atualizar o iterador
+        } else {
+            (*it)->setY((*it)->getY()-0.5);
+            (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
+            ++it; // Incrementar o iterador para avançar para o próximo elemento
+        }
+    }
 
     if(collider()){
         player->reespawn(w);

@@ -46,23 +46,24 @@
 
 1589217858 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\vector2.h
 
-1684703946 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
+1684713209 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\base.cpp
 	"Base.h"
 
-1684702866 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
+1684717877 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.cpp
 	"Protagonist.h"
 
-1684701387 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
+1684717635 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\protagonist.h
 	"Agent.h"
 	"../weapon/Weapon.h"
 	"../weapon/Base.h"
+	"../weapon/Glock.h"
 
-1684701416 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
+1684706011 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\agent.h
 	"../canvas/gl_canvas2d.h"
 	"../canvas/utils.h"
 	<vector>
 
-1684698142 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
+1684717731 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -96,23 +97,21 @@
 	"Projectile.h"
 	<cmath>
 
-1684619246 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
+1684712038 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\defaultprojectile.cpp
 	"DefaultProjectile.h"
 
-1684694874 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.cpp
+1684716677 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.cpp
 	"Stage.h"
 
-1684616683 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.h
+1684709599 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\stage.h
 	<vector>
-	"../src/agent/Protagonist.h"
 	"../src/canvas/gl_canvas2d.h"
 	"../src/canvas/Vector2.h"
 	"../src/agent/Enemy.h"
 	"../src/canvas/utils.h"
-	<random>
-	<chrono>
+	"Box.h"
 
-1684618272 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.h
+1684713542 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.h
 	"../canvas/gl_canvas2d.h"
 	"../agent/Agent.h"
 	"../weapon/Weapon.h"
@@ -134,10 +133,10 @@
 1684703768 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\guidedprojectile.cpp
 	"GuidedProjectile.h"
 
-1684703070 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.cpp
+1684716710 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.cpp
 	"Enemy.h"
 
-1684699175 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
+1684712607 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
 	<cmath>
 	<vector>
 	"Vector2.h"
@@ -151,4 +150,28 @@
 1684700938 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\bmp\bmp.h
 	<stdio.h>
 	<stdlib.h>
+
+1684710617 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\glock.h
+	"Weapon.h"
+	"projectile/RainbowProjectile.h"
+	"../canvas/gl_canvas2d.h"
+
+1684705398 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\rainbowprojectile.h
+	"Projectile.h"
+
+1684711074 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\box.h
+	<random>
+	<chrono>
+	"../weapon/Weapon.h"
+	"../weapon/Glock.h"
+	"../agent/Protagonist.h"
+
+1684712815 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\stage\box.cpp
+	"Box.h"
+
+1684711623 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\glock.cpp
+	"Glock.h"
+
+1684712508 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\weapon\projectile\rainbowprojectile.cpp
+	"RainbowProjectile.h"
 

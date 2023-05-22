@@ -1,7 +1,7 @@
-#include "DefaultProjectile.h"
+#include "RainbowProjectile.h"
 
 
-void DefaultProjectile::atualizaHitbox(){
+void RainbowProjectile::atualizaHitbox(){
     reta r;
     hitbox.retas.clear();
     r.p1 = Vector2(getX(), getY());
@@ -23,17 +23,18 @@ void DefaultProjectile::atualizaHitbox(){
     
 }
 
-void DefaultProjectile::collider(){
+void RainbowProjectile::collider(){
 
 }
 
 
-DefaultProjectile::DefaultProjectile(int _x, int _y){
-    setX(_x);
+RainbowProjectile::RainbowProjectile(int _x, int _y){
+    turn = false;
+    setX(_x+15);
     setY(_y);
-    setDamage(1);
-    setSpeed(5);
-    setHeight(40);
+    setDamage(2);
+    setSpeed(10);
+    setHeight(20);
     setWidth(20);
     setRange(300);
     atualizaHitbox();
@@ -41,13 +42,27 @@ DefaultProjectile::DefaultProjectile(int _x, int _y){
 }
 
 
-void DefaultProjectile::move(){
+void RainbowProjectile::move(){
     setY(getY() + getSpeed());
     setRange(getRange() - 1);
     atualizaHitbox();
 }
 
-void DefaultProjectile::render(){
-    CV::color(1, 0, 0);
+void RainbowProjectile::render(){
+    if(turn){
+        CV::color(0, 1, 1);
+        setX(getX() + 30);
+    }
+    else{
+        CV::color(1, 1, 0);
+        setX(getX() - 30);
+    }
+    turn = !turn;
+    
     CV::rectFill(getX(), getY(), getX() + getWidth(), getY() + getHeight());
+
+    CV::color(0, 0, 0);
+    for(int i = 0; i < 5; i++){
+        CV::rect(getX()-i, getY()-i, getX() + getWidth()+i, getY() + getHeight()+i);
+    }
 }
