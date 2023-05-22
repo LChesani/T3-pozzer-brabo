@@ -36,16 +36,23 @@ RainbowProjectile::RainbowProjectile(int _x, int _y){
     setSpeed(10);
     setHeight(20);
     setWidth(20);
-    setRange(300);
+    setRange(50);
     atualizaHitbox();
     alive = true;
 }
+
+
 
 
 void RainbowProjectile::move(){
     setY(getY() + getSpeed());
     setRange(getRange() - 1);
     atualizaHitbox();
+}
+
+
+void RainbowProjectile::setAlive(){
+    alive = false;
 }
 
 void RainbowProjectile::render(){

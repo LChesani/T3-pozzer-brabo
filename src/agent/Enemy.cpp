@@ -76,7 +76,7 @@ void Enemy::update(Weapon *_w){
             for(auto r3 : (*it)->hitbox.retas){
                 if(getIntersection(r2, r3)){
                     setHp(getHp() - (*it)->getDamage()); //dano ao contato
-                    (*it)->alive = false;
+                    (*it)->setAlive();
                 }
             }
         }

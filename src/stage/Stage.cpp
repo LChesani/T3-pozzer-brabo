@@ -107,8 +107,11 @@ void Stage::render(){
         enemies.push_back(new Enemy(w/2, h, player, deltaTime/1000));
     }
 
-    if((deltaTime % 3000) == 0){
-        boxes.push_back(new Box(w/2, h, player));
+    if((deltaTime % 500) == 0){
+        std::random_device rd;
+        std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count());
+        std::uniform_int_distribution<> local(w*0.1, w-(w*0.1));
+        boxes.push_back(new Box(local(eng), h, player, w, h));
     }
 
 

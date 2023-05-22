@@ -2,8 +2,7 @@
 #define __VECTOR_2_H__
 
 
-class Vector2
-{
+class Vector2{
 public:
    float x, y;
 

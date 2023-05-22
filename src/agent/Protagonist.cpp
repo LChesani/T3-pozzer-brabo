@@ -1,7 +1,7 @@
 #include "Protagonist.h"
 
 
-void Protagonist::atualizaHitbox() {
+void Protagonist::atualizaHitbox() { //esse tem 3 retas, e um triangulo, n faz mt sentido no meu caso mas ta ai
     hitbox.retas.clear();
 
     Vector2 p1(getX(), getY());

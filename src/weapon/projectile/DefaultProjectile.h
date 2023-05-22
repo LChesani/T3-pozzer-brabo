@@ -16,6 +16,7 @@ public:
     void move() override;
     void atualizaHitbox();
     void collider() override;
+    void setAlive() override;
 };
 
 

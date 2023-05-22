@@ -36,6 +36,10 @@ void GuidedProjectile::collider(){
     }
 }
 
+void GuidedProjectile::setAlive(){
+    alive = false;
+}
+
 
 GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
 {
@@ -45,7 +49,7 @@ GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
     setSpeed(5);
     setHeight(20);
     setWidth(20);
-    setRange(300);
+    setRange(150);
     target = _target;
     // direcao
     double directionX = target->getX() - getX();

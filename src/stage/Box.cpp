@@ -23,7 +23,9 @@ void Box::atualizaHitbox(){
 }
 
 
-Box::Box(float _x, float _y, Protagonist *_user){
+Box::Box(float _x, float _y, Protagonist *_user, float _w, float _h){
+    sw = _w;
+    sh = _h;
     x = _x;
     y = _y;
     w = 100;
@@ -47,6 +49,10 @@ Box::Box(float _x, float _y, Protagonist *_user){
 void Box::selectWeapon(){
     if(id == 0){
         user->special = new Glock(user);
+        return;
+    }
+    if(id == 1){
+        user->special = new Staff(user, sw, sh);
         return;
     }
 }

@@ -4,6 +4,7 @@
 #include <chrono>
 #include "../weapon/Weapon.h"
 #include "../weapon/Glock.h"
+#include "../weapon/Staff.h"
 #include "../agent/Protagonist.h"
 
 
@@ -16,15 +17,15 @@ class Box{
 private:
     float x, y;
     float w, h;
-
+    float sw, sh;
 
 protected:
     Protagonist *user;
-    int possible_weapons = 1;
+    int possible_weapons = 2;
 public:
     bool alive = true;
     int id; //numero da arma
-    Box(float _x, float _y, Protagonist *_user);
+    Box(float _x, float _y, Protagonist *_user, float _w, float _h);
     hb hitbox;
     Bmp *sprite;
     float getX() { return x; }

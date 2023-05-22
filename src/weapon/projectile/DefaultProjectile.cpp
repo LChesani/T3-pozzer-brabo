@@ -35,11 +35,14 @@ DefaultProjectile::DefaultProjectile(int _x, int _y){
     setSpeed(5);
     setHeight(40);
     setWidth(20);
-    setRange(300);
+    setRange(150);
     atualizaHitbox();
     alive = true;
 }
 
+void DefaultProjectile::setAlive(){
+    alive = false;
+}
 
 void DefaultProjectile::move(){
     setY(getY() + getSpeed());

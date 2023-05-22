@@ -20,11 +20,9 @@ Protagonist *player = nullptr;
 Stage *stage = nullptr;
 
 void render(){
+
    if(stage != nullptr){
       stage->render();
-   }
-
-   if(player != nullptr){
       player->render();
       player->timeBar(screenWidth, screenHeight);
       player->hpbar(screenWidth, screenHeight);
