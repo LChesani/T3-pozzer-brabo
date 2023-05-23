@@ -1,9 +1,9 @@
 #ifndef __WEAPON__H__
 #define __WEAPON__H__
 
-#include "../canvas/gl_canvas2d.h"
+
 #include "projectile/Projectile.h"
-#include "../agent/Agent.h"
+
 #include <vector>
 
 
@@ -17,9 +17,9 @@ private:
     Agent *user;
 
 protected:
-    
-    
-    
+
+
+
 public:
     std::vector<Projectile*> projectiles;
     Projectile *getProjectile() { return p; }

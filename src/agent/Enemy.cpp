@@ -61,10 +61,8 @@ void Enemy::move(){ //se move em direcao ao alvo
     else if (getX() > target->getX()){
         setX(getX() - getSpeed());
     }
-    if (getY() < target->getY()){
-        setY(getY() + getSpeed());
-    }
-    else if (getY() > target->getY()){
+
+    if (getY() > target->getY()){
         setY(getY() - getSpeed());
     }
 }

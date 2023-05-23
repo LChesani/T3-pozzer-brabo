@@ -33,9 +33,8 @@ Box::Box(float _x, float _y, Protagonist *_user, float _w, float _h){
     std::random_device rd;
     std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count());
     std::uniform_int_distribution<> weap(0, possible_weapons-1); //escolhe uma das armas especiais possiveis
- 
+
     id = weap(eng);
-    char numero = id+48;
 
     char *path = new char[100];
 

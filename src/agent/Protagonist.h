@@ -1,5 +1,6 @@
 #ifndef __PROTAGONIST__H__
 #define __PROTAGONIST__H__
+
 #include "Agent.h"
 #include "../weapon/Weapon.h"
 #include "../weapon/Base.h"
@@ -12,16 +13,18 @@ class Protagonist : public Agent{
 private:
     Weapon *current; //ponteiro para a arma atual
     bool firing;
-    int speedy;
-protected:  
-    int dir[2]; //direções
+    float speedy;
+
+protected:
+    float dir[2]; //direções
     int imortal;
     int timer; //tempo que pode usar a arma especial
     void status();
     Bmp *healthBar;
 public:
+
     Weapon *base;
-    Weapon *special;    
+    Weapon *special;
     Protagonist(int _w, float width, float height);
     void render() override;
     void move() override;
@@ -33,7 +36,7 @@ public:
     void setCurrentWeapon(Weapon *_c) { current = _c; }
     void shoot();
     void setSpeedY(int _s) { speedy = _s; }
-    int getSpeedY(){ return speedy; }
+    float getSpeedY(){ return speedy; }
     void atualizaHitbox();
     void reespawn(float sw);
     bool isAlive();

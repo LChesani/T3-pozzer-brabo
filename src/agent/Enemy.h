@@ -1,7 +1,6 @@
 #ifndef __ENEMY__H__
 #define __ENEMY__H__
 
-#include "../canvas/gl_canvas2d.h"
 #include "../agent/Agent.h"
 #include "../weapon/Weapon.h"
 #include "../weapon/EnemyWeapon.h"

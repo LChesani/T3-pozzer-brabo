@@ -6,22 +6,27 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "canvas/Frames.h"
 #include "stage/Stage.h"
 #include "agent/Agent.h"
 #include "agent/Protagonist.h"
 #include "canvas/gl_canvas2d.h"
 #include "stage/Stage.h"
 
+#include "canvas/gl_canvas2d.h"
 int screenWidth = 1280, screenHeight = 720;
 int mouseX, mouseY;
 
 Protagonist *player = nullptr;
 Stage *stage = nullptr;
+Frames *frames = nullptr;
+
 
 void render(){
 
-   if(stage != nullptr){
+
+   if(player != nullptr){
+      frames->plotFps(screenWidth, screenHeight);
       stage->render();
       player->render();
       player->timeBar(screenWidth, screenHeight);
@@ -29,7 +34,8 @@ void render(){
       if(!player->isAlive()){
          player = nullptr;
          delete player;
-         stage->player = nullptr;
+         stage = nullptr;
+         delete stage;
       }
    }
 }
@@ -68,6 +74,7 @@ int main(void)
 
    player = new Protagonist(screenWidth, 50.0, 100.0);
    stage = new Stage(screenWidth, screenHeight, player);
-   
+   frames = new Frames();
+   frames->setFps(120.0f);
    CV::run();
 }

@@ -4,7 +4,18 @@
 #include <vector>
 #include "Vector2.h"
 #include "../bmp/Bmp.h"
+#include <iostream>
+#include <string>
+#include <Windows.h>
+#include <mmsystem.h>
 
+static float Fmin(float a, float b){
+    return a < b ? a : b;
+}
+
+static float Fmax(float a, float b){
+    return a > b ? a : b;
+}
 
 struct reta{
     Vector2 p1;
@@ -39,10 +50,10 @@ static bool getIntersection(const reta& r1, const reta& r2) { //verificar a coli
         intersection.y = yNumerator / denominator;
 
         // Verifica se o ponto de interseção está dentro dos segmentos de reta
-        if (isBetween(intersection.x, std::min(r1.p1.x, r1.p2.x), std::max(r1.p1.x, r1.p2.x)) &&
-            isBetween(intersection.x, std::min(r2.p1.x, r2.p2.x), std::max(r2.p1.x, r2.p2.x)) &&
-            isBetween(intersection.y, std::min(r1.p1.y, r1.p2.y), std::max(r1.p1.y, r1.p2.y)) &&
-            isBetween(intersection.y, std::min(r2.p1.y, r2.p2.y), std::max(r2.p1.y, r2.p2.y))) {
+        if (isBetween(intersection.x, Fmin(r1.p1.x, r1.p2.x), Fmax(r1.p1.x, r1.p2.x)) &&
+            isBetween(intersection.x, Fmin(r2.p1.x, r2.p2.x), Fmax(r2.p1.x, r2.p2.x)) &&
+            isBetween(intersection.y, Fmin(r1.p1.y, r1.p2.y), Fmax(r1.p1.y, r1.p2.y)) &&
+            isBetween(intersection.y, Fmin(r2.p1.y, r2.p2.y), Fmax(r2.p1.y, r2.p2.y))) {
             return true;
         } else {
             // Ponto de interseção está fora dos segmentos de reta
@@ -51,5 +62,8 @@ static bool getIntersection(const reta& r1, const reta& r2) { //verificar a coli
     }
 }
 
+static void playAudio(const char* filename) {
+    PlaySound(filename, NULL, SND_ASYNC);
+}
 
 #endif

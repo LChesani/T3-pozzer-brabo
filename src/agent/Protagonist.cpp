@@ -42,6 +42,7 @@ Protagonist::Protagonist(int _w, float width, float height){
         dir[i] = 0;
     }
 
+
     imortal = 0;
 
     delta = 0;
@@ -77,9 +78,9 @@ void Protagonist::timeBar(float _w, float _h){
         float g = 0;
         float b = 0;
 
-        for(int i = 0; i < progress; i++){
-            g += 1.0f/200.0f;
-            r -= 1.0f/200.0f;
+        for(int i = 0; i < progress-10; i++){
+            g += 1.0f/190.0f;
+            r -= 1.0f/190.0f;
             CV::color(r, g, b);
             CV::line(i+10, _h-10, i+10, _h-40);
         }
@@ -94,15 +95,16 @@ void Protagonist::move(){
 void Protagonist::keyPress(int key){
     
     if(key == 'a' || key == 'A'){
-        dir[0] = -1;
+        dir[0] = -1.0f;
         return;
     }
     if(key == 'd' || key == 'D'){
-        dir[1] = 1;
+        dir[1] = 1.0f;
         return;
     }
     if(key == '1'){
         setCurrentWeapon(base);
+
         special = nullptr;
         timer = 0;
         return;
@@ -111,6 +113,7 @@ void Protagonist::keyPress(int key){
         if(special != nullptr && (getCurrentWeapon() != special)){
             timer = 2000;
             setCurrentWeapon(special);
+
         }
         return;
     }
@@ -128,11 +131,11 @@ void Protagonist::KeyUp(int key){
         return;
     }
     if(key == 'a' || key == 'A'){
-        dir[0] = 0;
+        dir[0] = 0.0f;
         return;
     }
     if(key == 'd' || key == 'D'){
-        dir[1] = 0;
+        dir[1] = 0.0f;
         return;
     }
 }

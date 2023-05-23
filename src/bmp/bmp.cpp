@@ -114,7 +114,6 @@ void Bmp::load(const char *fileName)
   bits   = info.bits;
   bytesPerLine =(3 * (width + 1) / 4) * 4;
   imagesize    = bytesPerLine*height;
-  int delta    = bytesPerLine - (3 * width);
 
   //realiza diversas verificacoes de erro e compatibilidade
   if( header.type != 19778 )

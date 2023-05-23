@@ -71,6 +71,7 @@
 		<Unit filename="src/assets/projectiles/guided/9.bmp" />
 		<Unit filename="src/bmp/Bmp.h" />
 		<Unit filename="src/bmp/bmp.cpp" />
+		<Unit filename="src/canvas/Frames.h" />
 		<Unit filename="src/canvas/Vector2.h" />
 		<Unit filename="src/canvas/gl_canvas2d.cpp" />
 		<Unit filename="src/canvas/gl_canvas2d.h" />
@@ -85,6 +86,8 @@
 		<Unit filename="src/weapon/EnemyWeapon.h" />
 		<Unit filename="src/weapon/Glock.cpp" />
 		<Unit filename="src/weapon/Glock.h" />
+		<Unit filename="src/weapon/Staff.cpp" />
+		<Unit filename="src/weapon/Staff.h" />
 		<Unit filename="src/weapon/Weapon.h" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.cpp" />
 		<Unit filename="src/weapon/projectile/DefaultProjectile.h" />
@@ -93,6 +96,8 @@
 		<Unit filename="src/weapon/projectile/Projectile.h" />
 		<Unit filename="src/weapon/projectile/RainbowProjectile.cpp" />
 		<Unit filename="src/weapon/projectile/RainbowProjectile.h" />
+		<Unit filename="src/weapon/projectile/Spell.cpp" />
+		<Unit filename="src/weapon/projectile/Spell.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

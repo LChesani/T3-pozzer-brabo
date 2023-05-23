@@ -2,7 +2,7 @@
 #define __GUIDEDPROJECTILE__H__
 
 #include "Projectile.h"
-#include "../../agent/Agent.h"
+
 #include <cmath>
 
 

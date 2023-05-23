@@ -17,11 +17,11 @@ Spell::Spell(int _x, int _y, float _w, float _h){
     delta = 0;
     setX(_x+15);
     setY(_y);
-    setDamage(9999999999);
+    setDamage(9999999); //sim, esse projetil mata tudo
     setSpeed(1);
     setHeight(dim);
     setWidth(dim);
-    setRange(_h*0.4);
+    setRange(_h*0.7);
     atualizaHitbox();
     alive = true;
     frameColor = 0;
@@ -50,8 +50,8 @@ void Spell::explosion(){
     reta r;
     setSpeed(0);
     hitbox.retas.clear();
-        //retas cobrindo metade da tela, minha colisao depende disso
-    for(int i = sh/2; i < sh; i++){
+        //retas cobrindo parte da tela, minha colisao depende disso
+    for(int i = sh/3; i < sh; i++){
         r.p1 = Vector2(0, i);
         r.p2 = Vector2(sw, i);
         hitbox.retas.push_back(r);
@@ -62,19 +62,23 @@ void Spell::explosion(){
 void Spell::move(){
     setY(getY() + getSpeed());
     setRange(getRange() - 1);
+    if((sound == false) && (getRange() < 100)){
+        sound = true;
+        playAudio("Trab3 (malvado)/src/assets/projectiles/spell/sounds/0.wav");
+    }
     if((getRange() < 10) && (getRange() > 0)){
         boom = true;
         setRange(9);
         delta+=1;
         r += 0.005;
         b -= 0.005;
-        if(delta > 200){
+        if(delta > 280){
             setRange(0);
             alive = false;
         }
         
         CV::color(r, g, b);
-        CV::circleFill(sw/2, sh/1.2f, sw/4, 50);
+        CV::circleFill(getX(), getY(), sw/3, 50);
         explosion();
     }
 }
@@ -88,7 +92,7 @@ void Spell::render(){
     frameColor+=1;
     if(!boom){
         sprites[sprite_count]->draw(getX(), getY());
-    }
+    } 
 
     if((frameColor % 5) == 0){
         sprite_count+=1;

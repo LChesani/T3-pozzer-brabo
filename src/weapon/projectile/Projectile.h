@@ -2,9 +2,7 @@
 #define __PROJECTILE__H__
 
 
-#include "../../canvas/gl_canvas2d.h"
 #include "../../agent/Agent.h"
-#include "../src/canvas/utils.h"
 
 
 
@@ -18,14 +16,13 @@ private:
     int damage;
     int range; //alcance
 protected:
-    
+
 
 public:
     Bmp **sprites;
     int n_sprites;
     int sprite_count;
     int delta;
-    
     hb hitbox;
     bool alive; //se a bala ainda ta no jogo
     float getX() { return x; }

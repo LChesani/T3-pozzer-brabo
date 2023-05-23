@@ -1,8 +1,8 @@
 #ifndef __AGENT__H__
 #define __AGENT__H__
 
-#include "../canvas/gl_canvas2d.h"
-#include "../canvas/utils.h"
+#include "../canvas/Frames.h"
+
 #include <vector>
 
 

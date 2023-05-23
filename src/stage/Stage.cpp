@@ -73,7 +73,7 @@ void removeAntigos(std::vector<Vector2> &v){
 
 bool Stage::collider() {
     hb hitbox = player->getHitbox();
-    for (int i = 0; i < esq.size() - 1; i++) {
+    for (unsigned int i = 0; i < esq.size() - 1; i++) {
         for (int j = 0; j < player->getHitbox().retas.size(); j++) {
             reta r;
             r.p1 = esq[i];
@@ -107,7 +107,7 @@ void Stage::render(){
         enemies.push_back(new Enemy(w/2, h, player, deltaTime/1000));
     }
 
-    if((deltaTime % 500) == 0){
+    if((deltaTime % 1500) == 0){
         std::random_device rd;
         std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count());
         std::uniform_int_distribution<> local(w*0.1, w-(w*0.1));
@@ -134,7 +134,7 @@ void Stage::render(){
 
     playerY += s;
 
-    for(int i = 0; i < esq.size(); i++){
+    for(unsigned int i = 0; i < esq.size(); i++){
         esq[i].y -= s;
         dir[i].y -= s;
 

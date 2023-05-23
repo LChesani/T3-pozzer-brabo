@@ -9,6 +9,7 @@ protected:
     float sw, sh;
     bool boom = false;
     float r;
+    bool sound = false;
     float g;
     float b;
 public:

@@ -46,7 +46,7 @@ GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
     setX(_x);
     setY(_y-50);
     setDamage(1);
-    setSpeed(5);
+    setSpeed(10);
     setHeight(20);
     setWidth(20);
     setRange(150);
