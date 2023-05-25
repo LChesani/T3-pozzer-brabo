@@ -29,10 +29,11 @@ void DefaultProjectile::collider(){
 
 
 DefaultProjectile::DefaultProjectile(int _x, int _y){
+    speedBase = 2000;
     setX(_x);
     setY(_y);
     setDamage(1);
-    setSpeed(10);
+    setSpeed(1/120);
     setHeight(40);
     setWidth(20);
     setRange(150);

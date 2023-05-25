@@ -38,7 +38,7 @@ Box::Box(float _x, float _y, Protagonist *_user, float _w, float _h){
 
     char *path = new char[100];
 
-    sprintf(path, "Trab3 (malvado)/src/assets/boxes/%d.bmp", id);
+    sprintf(path, "Trab3LuisChesani/src/assets/boxes/%d.bmp", id);
     sprite = new Bmp(path);
     user = _user;
     atualizaHitbox();

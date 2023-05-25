@@ -15,10 +15,11 @@ Spell::Spell(int _x, int _y, float _w, float _h){
     turn = false;
     dim = 40;
     delta = 0;
+    speedBase = 200;
     setX(_x+15);
     setY(_y);
     setDamage(9999999); //sim, esse projetil mata tudo
-    setSpeed(1);
+    setSpeed(1/120);
     setHeight(dim);
     setWidth(dim);
     setRange(_h*0.7);
@@ -30,7 +31,7 @@ Spell::Spell(int _x, int _y, float _w, float _h){
     sprites = new Bmp*[24];
     for(int i = 0; i < 24; i++){ //animacao do projetil
         char *path = new char[100];
-        sprintf(path, "Trab3 (malvado)/src/assets/projectiles/spell/%d.bmp", i+1);
+        sprintf(path, "Trab3LuisChesani/src/assets/projectiles/spell/%d.bmp", i+1);
         sprites[i] = new Bmp(path);
         delete path;
     }
@@ -64,9 +65,10 @@ void Spell::move(){
     setRange(getRange() - 1);
     if((sound == false) && (getRange() < 100)){
         sound = true;
-        playAudio("Trab3 (malvado)/src/assets/projectiles/spell/sounds/0.wav");
+        playAudio("Trab3LuisChesani/src/assets/projectiles/spell/sounds/0.wav");
     }
     if((getRange() < 10) && (getRange() > 0)){
+        speedBase = 0;
         boom = true;
         setRange(9);
         delta+=1;

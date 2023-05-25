@@ -44,14 +44,14 @@ Enemy::Enemy(int _x, int _y, Agent *target, int level){
     n_sprites = 8;
     sprite_count = 0;
     sprites = new Bmp*[8];
-    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/enemies/1.bmp");
-    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/enemies/2.bmp");
-    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/enemies/3.bmp");
-    sprites[3] = new Bmp("Trab3 (malvado)/src/assets/enemies/4.bmp");
-    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/enemies/5.bmp");
-    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/enemies/6.bmp");
-    sprites[6] = new Bmp("Trab3 (malvado)/src/assets/enemies/7.bmp");
-    sprites[7] = new Bmp("Trab3 (malvado)/src/assets/enemies/8.bmp");
+    sprites[0] = new Bmp("Trab3LuisChesani/src/assets/enemies/1.bmp");
+    sprites[1] = new Bmp("Trab3LuisChesani/src/assets/enemies/2.bmp");
+    sprites[2] = new Bmp("Trab3LuisChesani/src/assets/enemies/3.bmp");
+    sprites[3] = new Bmp("Trab3LuisChesani/src/assets/enemies/4.bmp");
+    sprites[4] = new Bmp("Trab3LuisChesani/src/assets/enemies/5.bmp");
+    sprites[5] = new Bmp("Trab3LuisChesani/src/assets/enemies/6.bmp");
+    sprites[6] = new Bmp("Trab3LuisChesani/src/assets/enemies/7.bmp");
+    sprites[7] = new Bmp("Trab3LuisChesani/src/assets/enemies/8.bmp");
 }
 
 void Enemy::move(){ //se move em direcao ao alvo

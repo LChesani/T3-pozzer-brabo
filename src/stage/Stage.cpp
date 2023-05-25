@@ -98,11 +98,6 @@ void Stage::render(){
     deltaTime += 1;
 
 
-    if(player == nullptr){
-        return;
-    }
-
-
     if((deltaTime % 500) == 0){
         enemies.push_back(new Enemy(w/2, h, player, deltaTime/1000));
     }
@@ -116,7 +111,7 @@ void Stage::render(){
 
 
 
-    int s = player->getSpeedY();
+    
 
     int _quadr = (static_cast<int>(playerY) / static_cast<int>(gap))/3;
 

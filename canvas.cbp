@@ -17,6 +17,9 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-lwinmm" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="../__bin/Release/canvas" prefix_auto="1" extension_auto="1" />

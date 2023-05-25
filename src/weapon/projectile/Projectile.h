@@ -12,13 +12,14 @@ class Projectile{
 private:
     float x, y;
     float height, width;
-    float speed;
+    
     int damage;
     int range; //alcance
 protected:
-
+    float speed;
 
 public:
+    float speedBase;
     Bmp **sprites;
     int n_sprites;
     int sprite_count;
@@ -35,7 +36,7 @@ public:
     void setWidth(float _w) { width = _w;}
     virtual void render() = 0;
     virtual void move() = 0;
-    void setSpeed(int _s) { speed = _s; }
+    void setSpeed(float relativeSpeed) { speed = speedBase*relativeSpeed; }
     float getSpeed() { return speed; }
     int getDamage() { return damage; }
     void setDamage(int _d) { damage = _d; }

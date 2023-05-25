@@ -29,11 +29,12 @@ void RainbowProjectile::collider(){
 
 
 RainbowProjectile::RainbowProjectile(int _x, int _y){
+    speedBase = 4000;
     turn = false;
     setX(_x+15);
     setY(_y);
     setDamage(2);
-    setSpeed(20);
+    setSpeed(1/120);
     setHeight(20);
     setWidth(20);
     setRange(50);

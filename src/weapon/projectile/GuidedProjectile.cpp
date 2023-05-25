@@ -43,10 +43,11 @@ void GuidedProjectile::setAlive(){
 
 GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
 {
+    speedBase = 2000;
     setX(_x);
     setY(_y-50);
     setDamage(1);
-    setSpeed(10);
+    setSpeed(1/120);
     setHeight(20);
     setWidth(20);
     setRange(150);
@@ -68,17 +69,17 @@ GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
     n_sprites = 11;
     sprite_count = 0;
     sprites = new Bmp*[11];
-    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/1.bmp");
-    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/2.bmp");
-    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/3.bmp");
-    sprites[3] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/4.bmp");
-    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/5.bmp");
-    sprites[5] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/6.bmp");
-    sprites[6] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/7.bmp");
-    sprites[7] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/8.bmp");
-    sprites[8] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/9.bmp");
-    sprites[9] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/10.bmp");
-    sprites[10] = new Bmp("Trab3 (malvado)/src/assets/projectiles/guided/11.bmp");
+    sprites[0] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/1.bmp");
+    sprites[1] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/2.bmp");
+    sprites[2] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/3.bmp");
+    sprites[3] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/4.bmp");
+    sprites[4] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/5.bmp");
+    sprites[5] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/6.bmp");
+    sprites[6] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/7.bmp");
+    sprites[7] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/8.bmp");
+    sprites[8] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/9.bmp");
+    sprites[9] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/10.bmp");
+    sprites[10] = new Bmp("Trab3LuisChesani/src/assets/projectiles/guided/11.bmp");
 }
 
 void GuidedProjectile::move()

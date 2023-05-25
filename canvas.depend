@@ -131,7 +131,7 @@
 1684885224 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\agent\enemy.cpp
 	"Enemy.h"
 
-1684880208 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
+1685040654 d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\canvas\utils.h
 	<cmath>
 	<vector>
 	"Vector2.h"
@@ -141,7 +141,7 @@
 	<Windows.h>
 	<mmsystem.h>
 
-1684871448 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\bmp\bmp.cpp
+1684885894 source:d:\5 semestre\pozzer\canvas2d\trab3 (malvado)\src\bmp\bmp.cpp
 	"Bmp.h"
 	<string.h>
 	"../canvas/gl_canvas2d.h"
@@ -197,4 +197,188 @@
 	<windows.h>
 	"gl_canvas2d.h"
 	"utils.h"
+
+1684885894 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\bmp\bmp.cpp
+	"Bmp.h"
+	<string.h>
+	"../canvas/gl_canvas2d.h"
+
+1684700938 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\bmp\bmp.h
+	<stdio.h>
+	<stdlib.h>
+
+1684872536 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Vector2.h"
+
+1426372440 d:\5 semestre\pozzer\canvas2d\trab3luischesani\include\gl\glut.h
+	"freeglut_std.h"
+
+1437579942 d:\5 semestre\pozzer\canvas2d\trab3luischesani\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1426372440 d:\5 semestre\pozzer\canvas2d\trab3luischesani\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1684872711 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\vector2.h
+	<cmath>
+	<cstdio>
+
+1685041031 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.cpp
+	"Enemy.h"
+
+1684873216 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.h
+	"../agent/Agent.h"
+	"../weapon/Weapon.h"
+	"../weapon/EnemyWeapon.h"
+
+1684873260 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\agent.h
+	"../canvas/Frames.h"
+	<vector>
+
+1685043855 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\frames.h
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	"gl_canvas2d.h"
+	"utils.h"
+
+1685040666 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\utils.h
+	<cmath>
+	<vector>
+	"Vector2.h"
+	"../bmp/Bmp.h"
+	<iostream>
+	<string>
+	<Windows.h>
+	<mmsystem.h>
+
+1684875197 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\weapon.h
+	"projectile/Projectile.h"
+	<vector>
+
+1685044215 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\projectile.h
+	"../../agent/Agent.h"
+
+1684612458 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\enemyweapon.h
+	"Weapon.h"
+	"projectile/GuidedProjectile.h"
+	"../canvas/gl_canvas2d.h"
+
+1684872643 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\guidedprojectile.h
+	"Projectile.h"
+	<cmath>
+
+1685043560 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\protagonist.cpp
+	"Protagonist.h"
+
+1685043287 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\protagonist.h
+	"Agent.h"
+	"../weapon/Weapon.h"
+	"../weapon/Base.h"
+	"../weapon/Glock.h"
+
+1684611073 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\base.h
+	"Weapon.h"
+	"projectile/DefaultProjectile.h"
+	"../canvas/gl_canvas2d.h"
+
+1684872608 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\defaultprojectile.h
+	"Projectile.h"
+	<cmath>
+
+1684872505 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\glock.h
+	"Weapon.h"
+	"projectile/RainbowProjectile.h"
+	"../canvas/gl_canvas2d.h"
+
+1684872637 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\rainbowprojectile.h
+	"Projectile.h"
+
+1685041033 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1685041034 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\box.cpp
+	"Box.h"
+
+1684872665 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\box.h
+	<random>
+	<chrono>
+	"../weapon/Weapon.h"
+	"../weapon/Glock.h"
+	"../weapon/Staff.h"
+	"../agent/Protagonist.h"
+
+1684790847 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.h
+	"Weapon.h"
+	"projectile/Spell.h"
+	"../canvas/gl_canvas2d.h"
+
+1684883732 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\spell.h
+	"Projectile.h"
+
+1685043625 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\stage.cpp
+	"Stage.h"
+
+1685043634 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\stage.h
+	<vector>
+	"../src/canvas/Vector2.h"
+	"../src/agent/Enemy.h"
+	"Box.h"
+
+1685041044 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\base.cpp
+	"Base.h"
+
+1685041045 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\enemyweapon.cpp
+	"EnemyWeapon.h"
+
+1685041046 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\glock.cpp
+	"Glock.h"
+
+1685041038 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\defaultprojectile.cpp
+	"DefaultProjectile.h"
+
+1685041038 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\guidedprojectile.cpp
+	"GuidedProjectile.h"
+
+1685041040 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\rainbowprojectile.cpp
+	"RainbowProjectile.h"
+
+1685041042 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\spell.cpp
+	"Spell.h"
+
+1685041048 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.cpp
+	"Staff.h"
+
+1685041637 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"GameManager.h"
+	"canvas/gl_canvas2d.h"
+	"canvas/gl_canvas2d.h"
+
+1685042782 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\gamemanager.h
+	"canvas/utils.h"
+	"agent/Protagonist.h"
+	"stage/Stage.h"
+
+1685044485 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\gamemanager.cpp
+	"GameManager.h"
 

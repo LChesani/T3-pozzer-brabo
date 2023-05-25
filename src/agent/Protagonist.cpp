@@ -27,8 +27,7 @@ void Protagonist::atualizaHitbox() { //esse tem 3 retas, e um triangulo, n faz m
 
 Protagonist::Protagonist(int _w, float width, float height){
     target = nullptr;
-    setSpeedY(2); //cima
-    setSpeed(4); //lados
+
     setX(_w/2 - width/2);
     setY(10);
     setHp(3); //vida
@@ -52,11 +51,11 @@ Protagonist::Protagonist(int _w, float width, float height){
     n_sprites = 4;
     sprite_count = 0;
     sprites = new Bmp*[4];
-    sprites[0] = new Bmp("Trab3 (malvado)/src/assets/protagonist/1.bmp");
-    sprites[1] = new Bmp("Trab3 (malvado)/src/assets/protagonist/2.bmp");
-    sprites[2] = new Bmp("Trab3 (malvado)/src/assets/protagonist/3.bmp");
-    sprites[4] = new Bmp("Trab3 (malvado)/src/assets/protagonist/4.bmp");
-    healthBar = new Bmp("Trab3 (malvado)/src/assets/protagonist/life.bmp");
+    sprites[0] = new Bmp("Trab3LuisChesani/src/assets/protagonist/1.bmp");
+    sprites[1] = new Bmp("Trab3LuisChesani/src/assets/protagonist/2.bmp");
+    sprites[2] = new Bmp("Trab3LuisChesani/src/assets/protagonist/3.bmp");
+    sprites[4] = new Bmp("Trab3LuisChesani/src/assets/protagonist/4.bmp");
+    healthBar = new Bmp("Trab3LuisChesani/src/assets/protagonist/life.bmp");
 }
 
 
@@ -92,16 +91,16 @@ void Protagonist::move(){
     setX(getX() + getSpeed() * (dir[0] + dir[1]));
 }
 
+
+void Protagonist::setDir(int _dir, float relativeSpeed){
+    float mult = 1;
+    if(_dir == 0){
+        mult = -1;
+    }
+    dir[_dir] = mult * 200.0f * relativeSpeed;
+}
+
 void Protagonist::keyPress(int key){
-    
-    if(key == 'a' || key == 'A'){
-        dir[0] = -1.0f;
-        return;
-    }
-    if(key == 'd' || key == 'D'){
-        dir[1] = 1.0f;
-        return;
-    }
     if(key == '1'){
         setCurrentWeapon(base);
 
@@ -131,11 +130,11 @@ void Protagonist::KeyUp(int key){
         return;
     }
     if(key == 'a' || key == 'A'){
-        dir[0] = 0.0f;
+        setDir(0, 0);
         return;
     }
     if(key == 'd' || key == 'D'){
-        dir[1] = 0.0f;
+        setDir(1, 0);
         return;
     }
 }

@@ -23,7 +23,7 @@
 class Frames{
    clock_t t1, t2;
    long    cont_frames;
-   float   relativeSpeed = 1, fps = 120, fps_old;
+   float   fps, fps_old;
    float lim = 20.0f;
 public:
    Frames()
@@ -63,36 +63,11 @@ public:
         this->lim = fps;
     }
 
-   float getFps(){
-      return fps;
-   }
-
-    void control(){
-        getFrames();
-        if(fps > lim){
+    void limit(float old){
+        if(old > lim){
             Sleep((1000/lim) - (1000/fps));
         }
     }
-
-    float getRelativeSpeed(){
-        return relativeSpeed;
-    }
-
-   void plotFps(float w, float h){
-      CV::color(0,0,0);
-      control();
-      fps = getFrames();
-      relativeSpeed = fps/120.0f;
-      
-      char *str = new char[10];
-      char *str2 = new char[20];
-      
-      sprintf(str, "FPS: %.0f", fps);
-      sprintf(str2, "Speed: %.5f", relativeSpeed);
-      CV::text(10, h-70, str);
-      CV::text(10, h-80, str2);
-   }
-
 };
 
 #endif
