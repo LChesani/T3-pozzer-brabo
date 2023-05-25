@@ -67,12 +67,9 @@ void Protagonist::timeBar(float _w, float _h){
             setCurrentWeapon(base);
             special = nullptr;
         }
-        CV::color(0, 0, 0);
-        for(int i = 0; i < 10; i++){
-            CV::rect(0+i, _h-i, 200+i, _h-50+i);
-        }
         int progress = timer/10;
-        
+
+
         float r = 1;
         float g = 0;
         float b = 0;
@@ -81,7 +78,7 @@ void Protagonist::timeBar(float _w, float _h){
             g += 1.0f/190.0f;
             r -= 1.0f/190.0f;
             CV::color(r, g, b);
-            CV::line(i+10, _h-10, i+10, _h-40);
+            CV::line(i+10, _h-10, i+10, _h-27);
         }
     }
 }
@@ -164,7 +161,7 @@ void Protagonist::status(){
         }
     }
 
-    
+
 }
 
 bool Protagonist::isAlive(){
@@ -187,7 +184,7 @@ void Protagonist::powerUp(Weapon *_new){
 void Protagonist::render(){
     move();
     status();
-    
+
     isAlive();
 
 

@@ -20,6 +20,7 @@ protected:
     bool collider();
     int deltaTime;
 public:
+    int score;
     float s;
     std::vector<Box*> boxes;
     Protagonist *player;

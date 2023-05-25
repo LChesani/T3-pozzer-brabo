@@ -18,6 +18,7 @@ protected:
     float relativeSpeed;
     float currentFps;
     char *info;
+    int score;
 public:
     GameManager(int _w, int _h);
     void render();
@@ -26,6 +27,8 @@ public:
     void endGame();
     void fpsControl();
     void controlSpeed();
+    void plotScore();
+    void hud();
 };
 
 

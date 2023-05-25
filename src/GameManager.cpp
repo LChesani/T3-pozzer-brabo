@@ -12,6 +12,7 @@ GameManager::GameManager(int _w, int _h){
     currentFps = 120.0f;
     relativeSpeed = 1.0f/120.0f;
     info = new char[100];
+    score = 0;
 }
 
 
@@ -76,15 +77,31 @@ void GameManager::fpsControl(){
     CV::text(10, h-100, info);
 }
 
+void GameManager::plotScore(){
+    CV::color(1, 1, 1);
+    sprintf(info, "%d", score);
+    CV::text(w/2-(10*strlen(info)), h-10, info);
+}
+
+void GameManager::hud(){
+    CV::color(0);
+    CV::rectFill(0, h, w, h-37);
+    CV::color(1, 1, 1);
+    CV::rectFill(5, h-5, 205, h-32);
+    plotScore();
+    player->timeBar(w, h);
+    player->hpbar(w, h);
+}
+
 void GameManager::render(){
     //fps->limit(currentFps); //descomentar caso queira travar o fps, e meio bugado, so fiz pra teste
     fpsControl();
     controlSpeed();
     stage->render();
+    score = stage->score;
     player->render();
-    player->timeBar(w, h);
-    player->hpbar(w, h);
     if(!player->isAlive()){
         endGame();
     }
+    hud();
 }

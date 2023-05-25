@@ -18,6 +18,7 @@ Stage::Stage(int _w, int _h, Protagonist *player){
     bezier();
     quadrante = 0;
     deltaTime = 0; //famoso delta time calculado por frame
+    score = 0;
 }
 
 float Stage::calcGap(int n){
@@ -55,7 +56,7 @@ void Stage::bezier(){ //gera pontos de bezier para serem usados em uma curva cú
 }
 
 
-void fazPonto(float x, float y){
+void point(float x, float y){
     CV::color(0);
     for(int i = 0; i < 10; i++){
         CV::point(x+i, y+i);
@@ -97,12 +98,12 @@ bool Stage::collider() {
 void Stage::render(){
     deltaTime += 1;
 
-
+    int level = deltaTime / 2000;
     if((deltaTime % 500) == 0){
         std::random_device rd;
         std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count()%w);
         std::uniform_int_distribution<> local(w*0.2, w-(w*0.2));
-        enemies.push_back(new Enemy(local(eng), h, player, deltaTime/1000));
+        enemies.push_back(new Enemy(local(eng), h, player, level));
     }
 
     if((deltaTime % 1500) == 0){
@@ -113,7 +114,9 @@ void Stage::render(){
     }
 
 
-
+    if((deltaTime % 100) == 0){
+        score += 1;
+    }
     
 
     int _quadr = (static_cast<int>(playerY) / static_cast<int>(gap))/3;
@@ -143,8 +146,8 @@ void Stage::render(){
                 ye = pow(1-t, 3)*esq[i].y + 3*t*pow(1-t, 2)*esq[i+1].y + 3*pow(t, 2)*(1-t)*esq[i+2].y + pow(t, 3)*esq[i+3].y;
                 xd = pow(1-t, 3)*dir[i].x + 3*t*pow(1-t, 2)*dir[i+1].x + 3*pow(t, 2)*(1-t)*dir[i+2].x + pow(t, 3)*dir[i+3].x;
                 yd = pow(1-t, 3)*dir[i].y + 3*t*pow(1-t, 2)*dir[i+1].y + 3*pow(t, 2)*(1-t)*dir[i+2].y + pow(t, 3)*dir[i+3].y;
-                fazPonto(xe, ye);
-                fazPonto(xd, yd);
+                point(xe, ye);
+                point(xd, yd);
             }
         }
     }
@@ -153,6 +156,7 @@ void Stage::render(){
         if (!(*it)->alive) {
             delete *it; // Deletar o objeto apontado pelo ponteiro
             it = enemies.erase(it); // Remover o ponteiro do vetor e atualizar o iterador
+            score += level; //pontuacao extra por matar inimigos
         } else {
             (*it)->update(player->getCurrentWeapon()); //verifica se alguma bala pegou nele
             (*it)->render(); // Chamar o método render() no objeto apontado pelo ponteiro
