@@ -99,13 +99,16 @@ void Stage::render(){
 
 
     if((deltaTime % 500) == 0){
-        enemies.push_back(new Enemy(w/2, h, player, deltaTime/1000));
+        std::random_device rd;
+        std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count()%w);
+        std::uniform_int_distribution<> local(w*0.2, w-(w*0.2));
+        enemies.push_back(new Enemy(local(eng), h, player, deltaTime/1000));
     }
 
     if((deltaTime % 1500) == 0){
         std::random_device rd;
         std::mt19937 eng(std::chrono::high_resolution_clock::now().time_since_epoch().count());
-        std::uniform_int_distribution<> local(w*0.1, w-(w*0.1));
+        std::uniform_int_distribution<> local(w*0.2, w-(w*0.2));
         boxes.push_back(new Box(local(eng), h, player, w, h));
     }
 

@@ -43,21 +43,21 @@ void GuidedProjectile::setAlive(){
 
 GuidedProjectile::GuidedProjectile(int _x, int _y, Agent *_target)
 {
-    speedBase = 2000;
+    speedBase = 500;
     setX(_x);
     setY(_y-50);
     setDamage(1);
-    setSpeed(1/120);
+    setSpeed(1.0f/120.0f);
     setHeight(20);
     setWidth(20);
-    setRange(150);
+    setRange(200);
     target = _target;
     // direcao
     double directionX = target->getX() - getX();
     double directionY = target->getY() - getY();
 
-
     double scalingFactor = getSpeed() / std::sqrt(directionX * directionX + directionY * directionY);
+
     directionX *= scalingFactor;
     directionY *= scalingFactor;
 

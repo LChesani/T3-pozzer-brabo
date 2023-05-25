@@ -198,7 +198,7 @@
 	"gl_canvas2d.h"
 	"utils.h"
 
-1684885894 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\bmp\bmp.cpp
+1685047513 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\bmp\bmp.cpp
 	"Bmp.h"
 	<string.h>
 	"../canvas/gl_canvas2d.h"
@@ -207,7 +207,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1684872536 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.h
+1685047470 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.h
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -237,15 +237,15 @@
 	<cmath>
 	<cstdio>
 
-1685041031 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.cpp
+1685047019 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.cpp
 	"Enemy.h"
 
-1684873216 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.h
+1685046737 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\enemy.h
 	"../agent/Agent.h"
 	"../weapon/Weapon.h"
 	"../weapon/EnemyWeapon.h"
 
-1684873260 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\agent.h
+1685046650 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\agent\agent.h
 	"../canvas/Frames.h"
 	<vector>
 
@@ -266,7 +266,7 @@
 	<Windows.h>
 	<mmsystem.h>
 
-1684875197 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\weapon.h
+1685047970 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\weapon.h
 	"projectile/Projectile.h"
 	<vector>
 
@@ -308,7 +308,7 @@
 1684872637 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\rainbowprojectile.h
 	"Projectile.h"
 
-1685041033 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.cpp
+1685047481 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\canvas\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
@@ -323,7 +323,7 @@
 	"../weapon/Staff.h"
 	"../agent/Protagonist.h"
 
-1684790847 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.h
+1685048494 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.h
 	"Weapon.h"
 	"projectile/Spell.h"
 	"../canvas/gl_canvas2d.h"
@@ -331,7 +331,7 @@
 1684883732 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\spell.h
 	"Projectile.h"
 
-1685043625 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\stage.cpp
+1685047114 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\stage.cpp
 	"Stage.h"
 
 1685043634 d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\stage\stage.h
@@ -340,28 +340,28 @@
 	"../src/agent/Enemy.h"
 	"Box.h"
 
-1685041044 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\base.cpp
+1685048196 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\base.cpp
 	"Base.h"
 
-1685041045 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\enemyweapon.cpp
+1685048352 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\enemyweapon.cpp
 	"EnemyWeapon.h"
 
-1685041046 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\glock.cpp
+1685048243 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\glock.cpp
 	"Glock.h"
 
-1685041038 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\defaultprojectile.cpp
+1685048009 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\defaultprojectile.cpp
 	"DefaultProjectile.h"
 
-1685041038 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\guidedprojectile.cpp
+1685048345 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\guidedprojectile.cpp
 	"GuidedProjectile.h"
 
-1685041040 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\rainbowprojectile.cpp
+1685045369 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\rainbowprojectile.cpp
 	"RainbowProjectile.h"
 
-1685041042 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\spell.cpp
+1685046100 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\projectile\spell.cpp
 	"Spell.h"
 
-1685041048 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.cpp
+1685045637 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\weapon\staff.cpp
 	"Staff.h"
 
 1685041637 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\main.cpp
@@ -379,6 +379,6 @@
 	"agent/Protagonist.h"
 	"stage/Stage.h"
 
-1685044485 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\gamemanager.cpp
+1685047306 source:d:\5 semestre\pozzer\canvas2d\trab3luischesani\src\gamemanager.cpp
 	"GameManager.h"
 

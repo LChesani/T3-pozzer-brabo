@@ -57,6 +57,7 @@ void Bmp::convertBGRtoRGB()
 }
 
 void Bmp::draw(float _x, float _y){
+   CV::pointInit();
    for (int y = 0; y < height; y++) {
         for (int x = 0; x < width * 3; x += 3) {
             // Calcule a posição do pixel no array de dados
@@ -74,9 +75,10 @@ void Bmp::draw(float _x, float _y){
             CV::color(r_norm, g_norm, b_norm);
 
             // Chame a função point para desenhar um ponto na posição (x / 3, y)
-            CV::point((x / 3)+_x, y+_y);
+            CV::point2((x / 3)+_x, y+_y);
         }
     }
+    CV::pointEnd();
 }
 
 void Bmp::load(const char *fileName)

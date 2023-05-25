@@ -31,9 +31,10 @@ void Enemy::atualizaHitbox(){
 Enemy::Enemy(int _x, int _y, Agent *target, int level){
     setX(_x);
     setY(_y);
+    speedBase = 25;
     setHeight(40);
     setWidth(40);
-    setSpeed(0.25);
+    setSpeed(1.0f/120.0f);
     this->target = target;
     setHp(2*level);
     alive = true;

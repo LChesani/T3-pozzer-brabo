@@ -5,7 +5,8 @@
 EnemyWeapon::EnemyWeapon(Agent *_user)
 {
     setUser(_user);
-    cooldown = 100;
+    baseCooldown = 3.0f;
+    setCooldown(1.0f/120.0f);
     count = 0;
 }
 

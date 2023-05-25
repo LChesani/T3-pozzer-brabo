@@ -10,9 +10,9 @@ class Enemy : public Agent{
 
 
 protected:
-    Weapon *weapon;
-
+    float speedBase;
 public:
+    Weapon *weapon;
     bool alive;
     Enemy(int _x, int _y, Agent *target, int level);
     void render() override;
@@ -21,6 +21,7 @@ public:
     void atualizaHitbox();
     void collider();
     void update(Weapon *_w);
+    void setRelativeSpeed(float relativeSpeed) { speed = speedBase*relativeSpeed; }
 };
 
 

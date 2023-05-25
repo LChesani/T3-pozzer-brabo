@@ -4,8 +4,9 @@
 Glock::Glock(Agent *_user)
 {
     setUser(_user);
-    cooldown = 20;
-    count = 0;
+    baseCooldown = 0.25f;
+    setCooldown(1.0f/120.0f);
+    count = 999;
 }
 
 void Glock::fire()

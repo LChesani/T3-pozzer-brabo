@@ -11,11 +11,11 @@ class Agent{
 private:
     float x, y;
     float height, width;
-    float speed;
 protected:
     int hp;
     hb hitbox;
     Agent *target;
+    float speed;
 public:
     Bmp **sprites;
     int n_sprites;

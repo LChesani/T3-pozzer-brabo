@@ -29,7 +29,7 @@ void RainbowProjectile::collider(){
 
 
 RainbowProjectile::RainbowProjectile(int _x, int _y){
-    speedBase = 4000;
+    speedBase = 2000;
     turn = false;
     setX(_x+15);
     setY(_y);
@@ -37,7 +37,7 @@ RainbowProjectile::RainbowProjectile(int _x, int _y){
     setSpeed(1/120);
     setHeight(20);
     setWidth(20);
-    setRange(50);
+    setRange(80);
     atualizaHitbox();
     alive = true;
 }

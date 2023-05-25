@@ -10,7 +10,7 @@ class Staff : public Weapon{
 
 protected:
     float sw, sh;
-
+    bool fired;
 
 
 public:

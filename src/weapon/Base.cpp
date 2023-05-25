@@ -8,8 +8,9 @@
 Base::Base(Agent *_user)
 {
     setUser(_user);
-    cooldown = 80;
-    count = 0;
+    baseCooldown = 0.75f;
+    setCooldown(1.0f/120.0f);
+    count = 999; //pra comecar atirando ja
 }
 
 void Base::fire()

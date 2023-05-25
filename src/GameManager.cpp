@@ -51,6 +51,16 @@ void GameManager::controlSpeed(){
         it++;
     }
 
+    player->getCurrentWeapon()->setCooldown(relativeSpeed);
+
+    for(auto it = stage->enemies.begin(); it != stage->enemies.end();){
+        for(auto it2 = (*it)->weapon->projectiles.begin(); it2 != (*it)->weapon->projectiles.end();){
+            (*it2)->setSpeed(relativeSpeed);
+            it2++;
+        }
+        (*it)->setRelativeSpeed(relativeSpeed);
+        it++;
+    }
 }
 
 void GameManager::fpsControl(){
@@ -67,7 +77,7 @@ void GameManager::fpsControl(){
 }
 
 void GameManager::render(){
-    //fps->limit(currentFps); //descomentar caso queira travar o fps, e meio bugado
+    //fps->limit(currentFps); //descomentar caso queira travar o fps, e meio bugado, so fiz pra teste
     fpsControl();
     controlSpeed();
     stage->render();

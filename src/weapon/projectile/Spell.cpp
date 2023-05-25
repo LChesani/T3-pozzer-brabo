@@ -15,14 +15,14 @@ Spell::Spell(int _x, int _y, float _w, float _h){
     turn = false;
     dim = 40;
     delta = 0;
-    speedBase = 200;
+    speedBase = 150;
     setX(_x+15);
     setY(_y);
     setDamage(9999999); //sim, esse projetil mata tudo
     setSpeed(1/120);
     setHeight(dim);
     setWidth(dim);
-    setRange(_h*0.7);
+    setRange(700);
     atualizaHitbox();
     alive = true;
     frameColor = 0;
@@ -74,7 +74,7 @@ void Spell::move(){
         delta+=1;
         r += 0.005;
         b -= 0.005;
-        if(delta > 280){
+        if(delta > 650){
             setRange(0);
             alive = false;
         }

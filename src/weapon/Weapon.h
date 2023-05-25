@@ -17,7 +17,7 @@ private:
     Agent *user;
 
 protected:
-
+    float baseCooldown;
 
 
 public:
@@ -25,6 +25,7 @@ public:
     Projectile *getProjectile() { return p; }
     int count;
     int cooldown;
+    void setCooldown(float relativeSpeed) {cooldown = baseCooldown/relativeSpeed; }
     void setProjectile(Projectile *_p) { p = _p; }
     virtual void fire() = 0;
     Agent *getUser() { return user; }
